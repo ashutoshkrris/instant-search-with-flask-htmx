@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Search</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <script src="https://unpkg.com/htmx.org@2.0.1"></script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="columns">
+        <div class="column is-one-third is-offset-one-third">
+          <input
+            type="text"
+            class="input"
+            placeholder="Search"
+            name="query"
+            hx-get="/search"
+            hx-trigger="keyup changed delay:500ms"
+            hx-target="#results"
+          />
+        </div>
+      </div>
+      <table class="table is-fullwidth">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Book Title</th>
+            <th>Book Author</th>
+          </tr>
+        </thead>
+        <tbody id="results">
+          {% for book in books %}
+          <tr>
+            <td>{{ book.id }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
