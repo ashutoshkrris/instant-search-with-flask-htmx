@@ -6,8 +6,4 @@ In this tutorial, we will learn how to create a simple instant search feature us
 
 Tutorial Link: https://blog.ashutoshkrris.in/implementing-instant-search-with-flask-and-htmx
 
-<<<<<<< Updated upstream:README.md
-Demo Video: 
-=======
 Demo Video: https://youtu.be/llCmZXaopX0
->>>>>>> Stashed changes:README
